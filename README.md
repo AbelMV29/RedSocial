@@ -12,6 +12,8 @@
 
 - La plataforma protegera la privacidad de los usuarios, en esta misma se promovera un comportamiento respetuoso y ético en linea.
 
+[Ver Diseño y Modelado de Datos](#diseño-y-modelado-de-datos)
+
 [Ver propuestas "Adicionales"](#propuestas-adicionales)
 
 *Nota: Los requisitos con esta tipografía son aquellos que aún no fueron contemplados en el modelado de datos.*
