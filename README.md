@@ -1,14 +1,15 @@
 # Red Social IFTS N°11
 
 ## Proyecto
-    Crear una pagina web y/o aplicación movil la cual permita la comunicación entre estudiantes exclusivamente del IFTS N°11 y asi mismo compartir recursos valiosos entre usuarios.
+- Crear una pagina web y/o aplicación movil la cual permita la comunicación entre estudiantes exclusivamente del IFTS N°11 y asi mismo compartir recursos valiosos entre usuarios.
 
 
 
 ## Logica de Negocio
-    La app/web de red social tiene como objetivo principal conectar a personas y facilitar la interacción y el intercambio de contenido entre ellos.
-    Los usuarios pueden registrarse para crear perfiles, conectarse con amigos, compartir publicaciones y participar en actividades sociales en línea.
-    La plataforma protegera la privacidad de los usuarios, en esta misma se promovera un comportamiento respetuoso y ético en linea.
+- La app/web de red social tiene como objetivo principal conectar a personas y facilitar la interacción y el intercambio de contenido entre ellos.
+
+- Los usuarios pueden registrarse para crear perfiles, conectarse con amigos, compartir publicaciones y participar en actividades sociales en línea.
+- La plataforma protegera la privacidad de los usuarios, en esta misma se promovera un comportamiento respetuoso y ético en linea.
 
 [Ver propuestas "Adicionales"](#propuestas-adicionales)
 
