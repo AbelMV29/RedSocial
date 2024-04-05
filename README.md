@@ -2,17 +2,19 @@
 ## <img src="https://media.licdn.com/dms/image/D4D03AQHYFQeuOTCN1g/profile-displayphoto-shrink_200_200/0/1663960064004?e=2147483647&v=beta&t=YxZ4ppfvNBOQrIOv4pZzxCKHJR0BbzQWiR_YFPONHHI">
 
 ## Proyecto
-- Crear una pagina web y/o aplicación movil la cual permita la comunicación entre estudiantes exclusivamente del IFTS N°11 y asi mismo compartir recursos valiosos entre usuarios.
-
+- Crear una página web y/o aplicación móvil que permita la comunicación entre estudiantes del IFTS N°11 y así mismo compartir recursos valiosos entre usuarios.
 
 
 ## Logica de Negocio
 - La app/web de red social tiene como objetivo principal conectar a personas y facilitar la interacción y el intercambio de contenido entre ellos.
 
 - Los usuarios pueden registrarse para crear perfiles, conectarse con amigos, compartir publicaciones y participar en actividades sociales en línea.
+
 - La plataforma protegera la privacidad de los usuarios, en esta misma se promovera un comportamiento respetuoso y ético en linea.
 
 [Ver propuestas "Adicionales"](#propuestas-adicionales)
+
+*Nota: Los requisitos con esta tipografía son aquellos que aún no fueron contemplados en el modelado de datos.*
 
 ## Requisitos Funcionales
 
@@ -56,4 +58,4 @@
 ![Representación Grafica del Modelo Relacional](./diagrams/Diagrama%20Relacional.png)
 
 ## Propuestas "adicionales":
-    En esta sección se incorporaran propuestas adicionales por personas "ajenas al proyecto"
+    En esta sección se incorporarán propuestas adicionales por personas "ajenas al proyecto"
