@@ -1,4 +1,5 @@
-# Red Social IFTS N°11
+# Red Social IFTS N°11 
+## <img src="https://media.licdn.com/dms/image/D4D03AQHYFQeuOTCN1g/profile-displayphoto-shrink_200_200/0/1663960064004?e=2147483647&v=beta&t=YxZ4ppfvNBOQrIOv4pZzxCKHJR0BbzQWiR_YFPONHHI">
 
 ## Proyecto
 - Crear una pagina web y/o aplicación movil la cual permita la comunicación entre estudiantes exclusivamente del IFTS N°11 y asi mismo compartir recursos valiosos entre usuarios.
