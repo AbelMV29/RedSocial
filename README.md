@@ -57,6 +57,6 @@
 ### Modelo Entidad-Relación
 ![Representación Grafica del Modelo Entidad-Relación](./diagrams/Diagrama%20Entidad-Relación.png)
 ### Modelo Relacional
-![Representación Grafica del Modelo Relacional](./diagrams/Diagrama%20Relacional.png)
+![Representación Grafica del Modelo Relacional](./diagrams/Diagrama%20Relacional.jpg)
 ## Propuestas "adicionales"
     En esta sección se incorporarán propuestas adicionales por personas "ajenas al proyecto"
