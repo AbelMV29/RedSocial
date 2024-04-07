@@ -59,5 +59,5 @@
 ### Modelo Relacional
 ![Representación Grafica del Modelo Relacional](./diagrams/Diagrama%20Relacional.png)
 
-## Propuestas "adicionales":
+## Propuestas "adicionales"
     En esta sección se incorporarán propuestas adicionales por personas "ajenas al proyecto"
