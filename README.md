@@ -58,5 +58,7 @@
 ![Representación Grafica del Modelo Entidad-Relación](./diagrams/Diagrama%20Entidad-Relación.png)
 ### Modelo Relacional
 ![Representación Grafica del Modelo Relacional](./diagrams/Diagrama%20Relacional.jpg)
+### Diagrama en SQL Server
+![Diagrama generado en base al script de la Base de Datos](./diagrams/Diagrama%20SQL%20Server.png)
 ## Propuestas "adicionales"
     En esta sección se incorporarán propuestas adicionales por personas "ajenas al proyecto"
