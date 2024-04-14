@@ -1,0 +1,40 @@
+﻿@using RedSocial.mvc.ViewModels.Account
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model LoginViewModel
+<div class=" mt-5 w-100 d-flex justify-content-center">
+    <form class="row g-3 border-danger" asp-controller="Account" asp-action="Login" method="post" style="width:26rem">
+        <div class="col-12 text-center">
+            <h2>Ingresar</h2>
+        </div>
+        <div class="col-12">
+            <span class="text-danger d-block" asp-validation-for="Email"></span>
+            <label asp-for="Email"></label>
+            <input class="form-control" asp-for="Email" placeholder="example@mail.com" />
+            <span class="form-text">Esta información es de caracter privada por lo cual no sera compartida</span>
+        </div>
+        <div class="col-12">
+            <span class="text-danger d-block" asp-validation-for="Password"></span>
+            <label asp-for="Password"></label>
+            <input type="password" class="form-control" asp-for="Password" placeholder="*********" />
+            <span class="form-text">La contraseña debe tener [8,15] caracteres (1 especial, 1 mayuscula y 1 minuscula)</span>
+        </div>
+        <div class="col-12 ">
+             <input class="form-check-input" type="checkbox" checked asp-for="RememberMe"/>
+             <label class="form-check-label" asp-for="RememberMe"></label>
+        </div>
+        @if (TempData.Count > 0)
+        {
+            <div class="col-12">
+                <span class="alert alert-danger d-block">@TempData["Error"]</span>
+            </div>
+        }
+        <div class="col-12">
+            <button class="btn btn-success col-12 px-1" type="submit">Ingresar</button>
+        </div>
+    </form>
+</div>

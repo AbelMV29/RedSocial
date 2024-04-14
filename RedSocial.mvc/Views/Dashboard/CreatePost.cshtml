@@ -1,0 +1,41 @@
+﻿@using RedSocial.mvc.ViewModels.Dashboard
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model CreatePostViewModel
+<div class=" mt-5 w-100 d-flex justify-content-center">
+    <form class="row g-3 border-danger" asp-controller="Dashboard" asp-action="CreatePost" enctype="multipart/form-data" method="post" style="width:26rem">
+        <div class="col-12 text-center">
+            <h2>Registrate! Es rapido</h2>
+        </div>
+        <div class="col-12">
+            <label asp-for="Title" class="form-label"></label>
+            <input type="text" class="form-control" asp-for="Title"/>
+            <span class="text-danger" asp-validation-for="Title"></span>
+
+        </div>
+        <div class="col-12">
+            <label asp-for="Body" class="form-label"></label>
+            <textarea class="form-control" asp-for="Body" rows="2"></textarea>
+            <span class="text-danger" asp-validation-for="Body"></span>
+
+        </div>
+        <div class="col-12">
+            <label asp-for="Image"></label>
+            <input type="file" class="form-control" asp-for="Image" placeholder="example" />
+            <span class="text-danger" asp-validation-for="Image"></span>
+
+        </div>
+        @if (TempData.Count > 0)
+        {
+            <div class="col-12">
+                <span class="alert alert-danger d-block">@TempData["Error"]</span>
+            </div>
+        }
+        <div class="col-12">
+            <button class="btn btn-success col-12 px-1" type="submit">Publicar</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,304 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Trabajos\\RedSocial\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|d:\\trabajos\\redsocial\\redsocial.mvc\\views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|solutionrelative:redsocial.mvc\\views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|d:\\trabajos\\redsocial\\redsocial.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|solutionrelative:redsocial.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|D:\\Trabajos\\RedSocial\\redsocial.mvc\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|solutionrelative:redsocial.mvc\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|D:\\Trabajos\\RedSocial\\redsocial.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|solutionrelative:redsocial.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|d:\\trabajos\\redsocial\\redsocial.mvc\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|solutionrelative:redsocial.mvc\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/localhost/RedSocialDB/True/SqlTable/dbo.Post.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/localhost/RedSocialDB/True/SqlTable/dbo.ProfileUser.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|d:\\trabajos\\redsocial\\redsocial.mvc\\datamodels\\profileuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|solutionrelative:redsocial.mvc\\datamodels\\profileuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|D:\\Trabajos\\RedSocial\\redsocial.mvc\\repository\\postrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|solutionrelative:redsocial.mvc\\repository\\postrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|d:\\trabajos\\redsocial\\redsocial.mvc\\interfaces\\ipostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|solutionrelative:redsocial.mvc\\interfaces\\ipostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|d:\\trabajos\\redsocial\\redsocial.mvc\\datamodels\\responsepostprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|solutionrelative:redsocial.mvc\\datamodels\\responsepostprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Migrations\\20240413002258_fixColumnsDate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RedSocial.mvc\\Migrations\\20240413002258_fixColumnsDate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|d:\\trabajos\\redsocial\\redsocial.mvc\\data\\redsocialcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|solutionrelative:redsocial.mvc\\data\\redsocialcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|d:\\trabajos\\redsocial\\redsocial.mvc\\datamodels\\commentpostprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|solutionrelative:redsocial.mvc\\datamodels\\commentpostprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|d:\\trabajos\\redsocial\\redsocial.mvc\\datamodels\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|solutionrelative:redsocial.mvc\\datamodels\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|d:\\trabajos\\redsocial\\redsocial.mvc\\datamodels\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|solutionrelative:redsocial.mvc\\datamodels\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|d:\\trabajos\\redsocial\\redsocial.mvc\\redsocialcontext.dgml||{295A0962-5A59-4F4F-9E12-6BC670C15C3B}",
+      "RelativeMoniker": "D:0:0:{ECC4BE1F-4039-44A9-816A-C90686DA64FF}|RedSocial.mvc\\RedSocial.mvc.csproj|solutionrelative:redsocial.mvc\\redsocialcontext.dgml||{295A0962-5A59-4F4F-9E12-6BC670C15C3B}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Program.cs",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\Program.cs",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Program.cs",
+              "RelativeToolTip": "RedSocial.mvc\\Program.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwB0AAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T02:26:07.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Views\\Account\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\Views\\Account\\ChangePassword.cshtml",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Views\\Account\\ChangePassword.cshtml",
+              "RelativeToolTip": "RedSocial.mvc\\Views\\Account\\ChangePassword.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-13T00:24:18.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "RedSocial.mvc\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAALMAAAAAAAAAAAAmwMAAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T17:18:14.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "dbo.Post [Datos]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost/RedSocialDB/True/SqlTable/dbo.Post.sql",
+              "ToolTip": "dbo.Post [Datos]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-13T00:24:06.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "RedSocial.mvc\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AQIAACYAAAAAAAAAAAAYwBUAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-13T00:24:18.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CommentPostProfile.cs",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\DataModels\\CommentPostProfile.cs",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\DataModels\\CommentPostProfile.cs",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\DataModels\\CommentPostProfile.cs",
+              "RelativeToolTip": "RedSocial.mvc\\DataModels\\CommentPostProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T00:21:35.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "dbo.ProfileUser [Datos]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost/RedSocialDB/True/SqlTable/dbo.ProfileUser.sql",
+              "ToolTip": "dbo.ProfileUser [Datos]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-13T00:23:46.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\Controllers\\DashboardController.cs",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "RedSocial.mvc\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwCAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T20:50:53.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PostRepository.cs",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Repository\\PostRepository.cs",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\Repository\\PostRepository.cs",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Repository\\PostRepository.cs",
+              "RelativeToolTip": "RedSocial.mvc\\Repository\\PostRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABsAAABsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T01:37:47.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ResponsePostProfile.cs",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\DataModels\\ResponsePostProfile.cs",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\DataModels\\ResponsePostProfile.cs",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\DataModels\\ResponsePostProfile.cs",
+              "RelativeToolTip": "RedSocial.mvc\\DataModels\\ResponsePostProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T00:22:17.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IPostRepository.cs",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Interfaces\\IPostRepository.cs",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\Interfaces\\IPostRepository.cs",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Interfaces\\IPostRepository.cs",
+              "RelativeToolTip": "RedSocial.mvc\\Interfaces\\IPostRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T00:34:36.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Post.cs",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\DataModels\\Post.cs",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\DataModels\\Post.cs",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\DataModels\\Post.cs",
+              "RelativeToolTip": "RedSocial.mvc\\DataModels\\Post.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T00:21:46.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProfileUser.cs",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\DataModels\\ProfileUser.cs",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\DataModels\\ProfileUser.cs",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\DataModels\\ProfileUser.cs",
+              "RelativeToolTip": "RedSocial.mvc\\DataModels\\ProfileUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAACUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T00:21:58.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Request.cs",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\DataModels\\Request.cs",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\DataModels\\Request.cs",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\DataModels\\Request.cs",
+              "RelativeToolTip": "RedSocial.mvc\\DataModels\\Request.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T00:22:08.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20240413002258_fixColumnsDate.cs",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Migrations\\20240413002258_fixColumnsDate.cs",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\Migrations\\20240413002258_fixColumnsDate.cs",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Migrations\\20240413002258_fixColumnsDate.cs",
+              "RelativeToolTip": "RedSocial.mvc\\Migrations\\20240413002258_fixColumnsDate.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T00:22:58.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RedSocialContext.dgml [Visor]",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\RedSocialContext.dgml",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\RedSocialContext.dgml",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\RedSocialContext.dgml [Visor]",
+              "RelativeToolTip": "RedSocial.mvc\\RedSocialContext.dgml [Visor]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000968|",
+              "WhenOpened": "2024-04-13T00:21:03.543Z",
+              "EditorCaption": " [Visor]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RedSocialContext.cs",
+              "DocumentMoniker": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Data\\RedSocialContext.cs",
+              "RelativeDocumentMoniker": "RedSocial.mvc\\Data\\RedSocialContext.cs",
+              "ToolTip": "D:\\Trabajos\\RedSocial\\RedSocial.mvc\\Data\\RedSocialContext.cs",
+              "RelativeToolTip": "RedSocial.mvc\\Data\\RedSocialContext.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAkwCwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T00:20:36.84Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

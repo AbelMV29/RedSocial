@@ -1,0 +1,20 @@
+﻿@using RedSocial.mvc.Interfaces
+@using RedSocial.mvc.Extension
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@inject IProfileUserRepository profileRepository;
+
+<div class="row mx-5">
+    <div class="col-md-3 bg-danger">
+        @if (User.Identity.IsAuthenticated)
+        {
+            var profileUser = await profileRepository.GetByIdentityUserId(User.GetIdActualIdentityUser());
+            <span class="">Hi @profileUser.Name @profileUser.LastName</span>
+        }
+    </div>
+    <div class="col-md-9 bg-warning">
+        hola
+    </div>
+</div>

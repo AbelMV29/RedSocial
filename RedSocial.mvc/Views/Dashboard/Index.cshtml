@@ -1,0 +1,83 @@
+﻿@using RedSocial.mvc.Interfaces
+@using RedSocial.mvc.Extension
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+@inject IProfileUserRepository profileRepository;
+@inject IPostRepository postRepository;
+
+<div class="row mx-5">
+    <div class="col-md-3">
+        @if (User.Identity.IsAuthenticated)
+        {
+            var profileUser = await profileRepository.GetByIdentityUserId(User.GetIdActualIdentityUser());
+            <img class="d-blox" src="@profileUser.ImageUrl" width="45rem"/>
+            <span class="d-block">Hi @profileUser.Name @profileUser.LastName</span>
+            <span class="text-dark">@profileUser.Description</span>
+        }
+    </div>
+    <div class="col-md-9  d-flex flex-column align-items-center">
+        @{
+            var postList = await postRepository.GetAllPostOrderByDateTime();
+            if(postList.Count() != 0)
+            {
+                foreach(var post in postList)
+                {
+                    <div class="col-7 mt-3">
+                        <div class="col-12 d-flex flex-row align-items-center gap-3">
+                            <img class="d-blox rounded-circle" src="@post.ProfileUser.ImageUrl" width="40rem" />
+                            <span class="text-primary">@post.ProfileUser.Name @post.ProfileUser.LastName </span>
+                            @{
+                                // Calcular la diferencia entre la fecha y hora actual y la fecha de creación del post
+                                TimeSpan tiempoTranscurrido = DateTime.Now - post.Created;
+                                // Mostrar la diferencia en formato legible para el usuario
+                                string tiempoTranscurridoTexto = ObtenerTiempoTranscurridoComoTexto(tiempoTranscurrido);
+                            }
+                            <span class="text-dark">@tiempoTranscurridoTexto</span>
+                        </div>
+                        <div class="col-12 d-flex flex-column gap-2">
+                            <span class="display-6">
+                                @post.Title
+                            </span>
+                            <span class="text-dark">
+                                @post.Body
+                            </span>
+                            <img src="@post.ImageUrl" width="300rem" />
+                        </div>
+                    </div>
+                    
+                }
+
+            }
+            else
+            {
+                <span class="display-6 text-warning">No hay post</span>
+            }
+            
+        }
+    </div>
+</div>
+
+@functions {
+    // Método para convertir un TimeSpan en formato legible para el usuario
+    public string ObtenerTiempoTranscurridoComoTexto(TimeSpan tiempo)
+    {
+        if (tiempo.TotalDays >= 1)
+        {
+            return $"{tiempo.Days} día(s) atrás";
+        }
+        else if (tiempo.TotalHours >= 1)
+        {
+            return $"{tiempo.Hours} hora(s) atrás";
+        }
+        else if (tiempo.TotalMinutes >= 1)
+        {
+            return $"{tiempo.Minutes} minuto(s) atrás";
+        }
+        else
+        {
+            return "Hace unos momentos";
+        }
+    }
+}

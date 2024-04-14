@@ -1,0 +1,42 @@
+﻿@using RedSocial.mvc.Extension
+@using RedSocial.mvc.Interfaces
+@using RedSocial.mvc.ViewModels.Profile
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@inject IProfileUserRepository profileRepository;
+@{var profileUser = await profileRepository.GetByIdentityUserId(User.GetIdActualIdentityUser());}
+@model NewUserViewModel
+<div class="row d-flex flex-column align-items-center">
+    <div class="mb-3">
+        <h3 class="text-center text-success">Bienvenido @profileUser.Name @profileUser.LastName!</h3>
+    </div>
+    <img class="rounded-circle" src="@profileUser.ImageUrl" id="imageProfile" />
+    <form class="col-4 mt-3" enctype="multipart/form-data" method="post" asp-action="NewUser">
+        @if (TempData.Count > 0)
+        {
+            <div class="col-12">
+                <span class="alert alert-danger d-block">@TempData["Error"]</span>
+            </div>
+        }
+        <div class="mb-3 d-flex">
+            <label class="col-3 align-self-center">Agrega una foto!</label>
+            <input type="file" class="form-control" asp-for="Image" />
+        </div>
+        <div class="mb-3 d-flex">
+            <label class="col-3">Añade una descripcion</label>
+            <input type="text" class="form-control" asp-for="Description"/>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Terminar</button>
+        </div>
+    </form>
+</div>
+<style>
+    #imageProfile
+    {
+        width:15rem;
+    }
+</style>
