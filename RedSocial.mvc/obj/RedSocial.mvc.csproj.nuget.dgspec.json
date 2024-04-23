@@ -50,6 +50,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BenchmarkDotNet": {
+              "target": "Package",
+              "version": "[0.13.12, )"
+            },
             "CloudinaryDotNet": {
               "target": "Package",
               "version": "[1.26.2, )"

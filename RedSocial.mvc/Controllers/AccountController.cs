@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using RedSocial.mvc.DataModels;
 using RedSocial.mvc.Interfaces;
-using RedSocial.mvc.Models;
 using RedSocial.mvc.ViewModels.Account;
 using RedSocial.mvc.Extension;
+using RedSocial.mvc.Mappers;
 
 namespace RedSocial.mvc.Controllers
 {
@@ -14,6 +14,7 @@ namespace RedSocial.mvc.Controllers
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IProfileUserRepository _profileUserRepository;
+        private readonly AccountMapper _accountMapper;
         public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager,
             IProfileUserRepository profileUserRepository, RoleManager<IdentityRole> roleManager)
         {
@@ -21,6 +22,7 @@ namespace RedSocial.mvc.Controllers
             _signInManager = signInManager;
             _profileUserRepository = profileUserRepository;
             _roleManager = roleManager;
+            _accountMapper = new AccountMapper();
 
         }
         [HttpGet]
@@ -53,31 +55,20 @@ namespace RedSocial.mvc.Controllers
             {
                 return View(model);
             }
-            if (model.ConfirmPassword != model.Password)
-            {
-                TempData["Error"] = "Las contraseñas no coinciden";
-                return View(model);
-            }
             var existsEmail = await _userManager.FindByEmailAsync(model.Email);
             if (existsEmail is not null)
             {
-                TempData["Error"] = "El email ya esta en uso";
+                ModelState.AddModelError("", "El email ya esta en uso");
                 return View(model);
             }
             var existUserName = await _userManager.FindByNameAsync(model.UserName);
             if (existUserName is not null)
             {
-                TempData["Error"] = "El nombre de usuario ya esta en uso";
+                ModelState.AddModelError("", "El nombre de usuario ya esta en uso");
                 return View(model);
             }
 
-            var identityUserModel = new IdentityUser()
-            {
-                UserName = model.UserName,
-                Email = model.Email,
-                NormalizedUserName = model.UserName.ToUpper(),
-                NormalizedEmail = model.Email.ToUpper()
-            };
+            var identityUserModel = _accountMapper.RegisterIdentityMapper(model);
 
             var identityCreateResult = await _userManager.CreateAsync(identityUserModel,model.Password);
             if(!identityCreateResult.Succeeded)
@@ -86,7 +77,7 @@ namespace RedSocial.mvc.Controllers
                 {
                     Console.WriteLine(error.Description);
                 }
-                TempData["Error"] = "Error al crear tu cuenta";
+                ModelState.AddModelError("", "Error al crear tu cuenta");
                 return View(model);
             }
 
@@ -106,18 +97,11 @@ namespace RedSocial.mvc.Controllers
                         Console.WriteLine(error.Description);
                     }
                 }
-                TempData["Error"] = "Error al crear tu cuenta";
+                ModelState.AddModelError("", "Error al crear tu cuenta");
                 return View(model);
             }
 
-            var profileUserCreate = new ProfileUser()
-            {
-                Name = model.Name,
-                LastName = model.LastName,
-                IdentityUserId = identityUserModel.Id,
-                IdentityUser = identityUserModel,
-                Created = DateTime.Now
-            };
+            var profileUserCreate = _accountMapper.RegisterProfileMapper(model,identityUserModel);
 
             var profileUserAddResult = await _profileUserRepository.Add(profileUserCreate);
             if(!profileUserAddResult)
@@ -130,7 +114,8 @@ namespace RedSocial.mvc.Controllers
                         Console.WriteLine(error.Description);
                     }
                 }
-                TempData["Error"] = "Error al crear tu cuenta";
+                ModelState.AddModelError("", "Error al crear tu perfil");
+
                 return View(model);
             }
             return RedirectToAction("Login");
@@ -156,6 +141,8 @@ namespace RedSocial.mvc.Controllers
             if(emailUserExist is null || !emailPasswordCorrect)
             {
                 TempData["Error"] = "El correo y/o la contraseña son incorrectos";
+                ModelState.AddModelError("","El correo y/o la contraseña son incorrectos");
+
                 return View(model);
             }
 
@@ -165,6 +152,7 @@ namespace RedSocial.mvc.Controllers
                 if(!signInResult.IsLockedOut)
                 {
                     TempData["Error"] = "Error al ingresar a tu cuenta";
+                    ModelState.AddModelError("", "Error al ingresar a tu cuenta");
                     return View(model);
                 }
                 return View("Locked");
@@ -202,12 +190,14 @@ namespace RedSocial.mvc.Controllers
             if(userEmailExist is null || userEmailExist.Email != User.GetEmailActualIdentityUser() || !passwordCheckResult)
             {
                 TempData["Error"] = "Email y/o contraseña incorrecta";
+                ModelState.AddModelError("", "El correo y/o la contraseña son incorrectos");
                 return View(model);
             }
             var changePasswordResult = await _userManager.ChangePasswordAsync(userEmailExist, model.Password, model.NewPassword);
             if(!changePasswordResult.Succeeded)
             {
                 TempData["Error"] = "Error al cambiar tu contraseña";
+                ModelState.AddModelError("", "Error al ccambiar tu contraseña");
                 return View(model);
             }
             model.Changed = true;

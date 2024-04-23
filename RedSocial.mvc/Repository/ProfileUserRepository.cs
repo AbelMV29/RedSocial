@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RedSocial.mvc.Data;
 using RedSocial.mvc.Interfaces;
-using RedSocial.mvc.Models;
+using RedSocial.mvc.DataModels;
 
 namespace RedSocial.mvc.Repository
 {
@@ -27,14 +27,15 @@ namespace RedSocial.mvc.Repository
             throw new NotImplementedException();
         }
 
-        public Task<ProfileUser> GetById(int id)
+        public async Task<ProfileUser> GetById(int id)
         {
-            throw new NotImplementedException();
+            var profileUser = await _context.ProfileUser.Include(p=>p.IdentityUser).FirstAsync(p=>p.ProfileUserId == id);
+            return profileUser;
         }
 
         public async Task<ProfileUser> GetByIdentityUserId(string identityUserId)
         {
-            var profileUser = await _context.ProfileUser.FirstAsync(p=>p.IdentityUserId == identityUserId);
+            var profileUser = await _context.ProfileUser.Include(p=>p.IdentityUser).FirstAsync(p=>p.IdentityUserId == identityUserId);
 
             return profileUser;
         }

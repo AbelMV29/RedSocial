@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RedSocial.mvc.Models
+namespace RedSocial.mvc.DataModels
 {
     public class Request
     {

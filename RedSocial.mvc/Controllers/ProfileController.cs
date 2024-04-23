@@ -49,5 +49,22 @@ namespace RedSocial.mvc.Controllers
             }
             return RedirectToAction("Index","Dashboard");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> ProfileDetails(int idProfile)
+        {
+            var profileUser = await _profileUserRepository.GetById(idProfile);
+            var profileDetailViewModel = new ProfileDetailViewModel()
+            {
+                Name = profileUser.Name,
+                LastName = profileUser.LastName,
+                Description = profileUser.Description,
+                ImageUrl = profileUser.ImageUrl,
+                Created = profileUser.Created,
+                Email = profileUser.IdentityUser.Email,
+                UserName = profileUser.IdentityUser.UserName
+            };
+            return View(profileDetailViewModel);
+        }
     }
 }

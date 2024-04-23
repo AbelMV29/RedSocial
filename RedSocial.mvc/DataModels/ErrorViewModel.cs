@@ -1,4 +1,5 @@
-namespace RedSocial.mvc.Models
+
+namespace RedSocial.mvc.DataModels
 {
     public class ErrorViewModel
     {

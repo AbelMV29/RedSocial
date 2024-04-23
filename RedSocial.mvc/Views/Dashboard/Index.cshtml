@@ -1,5 +1,6 @@
 ﻿@using RedSocial.mvc.Interfaces
 @using RedSocial.mvc.Extension
+@using RedSocial.mvc.ViewModels.Dashboard
 @{
     ViewData["Title"] = "Inicio";
 }
@@ -7,9 +8,11 @@
 @inject IProfileUserRepository profileRepository;
 @inject IPostRepository postRepository;
 
+@model PostDashboardViewModel
+@{bool IsAuthenticated = User.Identity.IsAuthenticated;}
 <div class="row mx-5">
-    <div class="col-md-3">
-        @if (User.Identity.IsAuthenticated)
+    <div class="col-12 col-md-3 align-items-center d-flex flex-column">
+        @if (IsAuthenticated)
         {
             var profileUser = await profileRepository.GetByIdentityUserId(User.GetIdActualIdentityUser());
             <img class="d-blox" src="@profileUser.ImageUrl" width="45rem"/>
@@ -17,42 +20,54 @@
             <span class="text-dark">@profileUser.Description</span>
         }
     </div>
-    <div class="col-md-9  d-flex flex-column align-items-center">
-        @{
-            var postList = await postRepository.GetAllPostOrderByDateTime();
-            if(postList.Count() != 0)
+    <div class="col-12 col-md-9  d-flex flex-column align-items-center">
+            @if(IsAuthenticated)
             {
-                foreach(var post in postList)
-                {
-                    <div class="col-7 mt-3">
-                        <div class="col-12 d-flex flex-row align-items-center gap-3">
-                            <img class="d-blox rounded-circle" src="@post.ProfileUser.ImageUrl" width="40rem" />
-                            <span class="text-primary">@post.ProfileUser.Name @post.ProfileUser.LastName </span>
-                            @{
-                                // Calcular la diferencia entre la fecha y hora actual y la fecha de creación del post
-                                TimeSpan tiempoTranscurrido = DateTime.Now - post.Created;
-                                // Mostrar la diferencia en formato legible para el usuario
-                                string tiempoTranscurridoTexto = ObtenerTiempoTranscurridoComoTexto(tiempoTranscurrido);
-                            }
-                            <span class="text-dark">@tiempoTranscurridoTexto</span>
-                        </div>
-                        <div class="col-12 d-flex flex-column gap-2">
-                            <span class="display-6">
-                                @post.Title
-                            </span>
-                            <span class="text-dark">
-                                @post.Body
-                            </span>
-                            <img src="@post.ImageUrl" width="300rem" />
-                        </div>
-                    </div>
-                    
-                }
+            <div class="col-12 col-md-7">
+                    <div class=" col-12 col-md-7 d-flex justify-content-center">
+                        <form class="row g-3 border-danger" asp-controller="Dashboard" asp-action="CreatePost" enctype="multipart/form-data" method="post" style="width:26rem">
+                            <div class="col-12 text-center">
+                                <h2>Crear un post!</h2>
+                            </div>
+                            <div class="col-12">
+                                <label asp-for="CreatePost.Title" class="form-label"></label>
+                                <input type="text" class="form-control" asp-for="CreatePost.Title"/>
+                                <span class="text-danger" asp-validation-for="CreatePost.Title"></span>
 
+                            </div>
+                            <div class="col-12">
+                                <label asp-for="CreatePost.Body" class="form-label"></label>
+                                <textarea class="form-control" asp-for="CreatePost.Body" rows="2"></textarea>
+                                <span class="text-danger" asp-validation-for="CreatePost.Body"></span>
+
+                            </div>
+                            <div class="col-12">
+                                <label asp-for="CreatePost.Image"></label>
+                                <input type="file" class="form-control" asp-for="CreatePost.Image" placeholder="example" />
+                                <span class="text-danger" asp-validation-for="CreatePost.Image"></span>
+
+                            </div>
+                            @if (TempData.Count > 0)
+                            {
+                                <div class="col-12">
+                                    <span class="alert alert-danger d-block">@TempData["Error"]</span>
+                                </div>
+                            }
+                            <div class="col-12">
+                                <button class="btn btn-success col-12 px-1" type="submit">Publicar</button>
+                            </div>
+                        </form>
+                    </div>
+            </div>
+            }
+        @{
+            if(Model.Posts?.Count != 0)
+            {
+                <partial name="_ProductsView" model="Model.Posts"></partial>
             }
             else
             {
-                <span class="display-6 text-warning">No hay post</span>
+                <span class="text-danger">No hay publicaciones</span>
             }
             
         }
@@ -60,24 +75,4 @@
 </div>
 
 @functions {
-    // Método para convertir un TimeSpan en formato legible para el usuario
-    public string ObtenerTiempoTranscurridoComoTexto(TimeSpan tiempo)
-    {
-        if (tiempo.TotalDays >= 1)
-        {
-            return $"{tiempo.Days} día(s) atrás";
-        }
-        else if (tiempo.TotalHours >= 1)
-        {
-            return $"{tiempo.Hours} hora(s) atrás";
-        }
-        else if (tiempo.TotalMinutes >= 1)
-        {
-            return $"{tiempo.Minutes} minuto(s) atrás";
-        }
-        else
-        {
-            return "Hace unos momentos";
-        }
-    }
 }

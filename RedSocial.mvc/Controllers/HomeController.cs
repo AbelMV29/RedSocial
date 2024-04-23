@@ -1,5 +1,6 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using RedSocial.mvc.Models;
+using RedSocial.mvc.DataModels;
 using System.Diagnostics;
 
 namespace RedSocial.mvc.Controllers
@@ -18,6 +19,7 @@ namespace RedSocial.mvc.Controllers
             return View();
         }
 
+        [Authorize(Roles ="user")]
         public IActionResult Privacy()
         {
             return View();
@@ -27,6 +29,11 @@ namespace RedSocial.mvc.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult NotFound()
+        {
+            return View();
         }
     }
 }

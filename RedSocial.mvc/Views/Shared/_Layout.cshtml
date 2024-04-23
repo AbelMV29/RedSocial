@@ -25,13 +25,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">RedSocial</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Registrarme</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Ingresar</a>
-                        </li>
-                        <li class="nav-item">
+                        @if(User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="ChangePassword">Cambiar Contraseña</a>
                         </li>
                         <li class="nav-item">
@@ -40,6 +36,16 @@
                         <li class="nav-item">
                             <a class="nav-link text-danger" asp-area="" asp-controller="Dashboard" asp-action="CreatePost">Crear Publicación</a>
                         </li>
+                        }
+                        else
+                        {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">Registrarme</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Ingresar</a>
+                        </li>
+                        }
                     </ul>
                 </div>
             </div>

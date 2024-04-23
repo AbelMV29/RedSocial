@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Running;
+using Microsoft.AspNetCore.Mvc;
 using RedSocial.mvc.Extension;
 using RedSocial.mvc.Interfaces;
-using RedSocial.mvc.Models;
+using RedSocial.mvc.Mappers;
+using RedSocial.mvc.DataModels;
 using RedSocial.mvc.ViewModels.Dashboard;
 
 namespace RedSocial.mvc.Controllers
@@ -12,51 +15,55 @@ namespace RedSocial.mvc.Controllers
         private readonly IPhotoService _photoService;
         private readonly IPostRepository _postRepository;
 
+        private readonly DashboardMapper _dashboardMapper;
+
         public DashboardController(IProfileUserRepository profileUserRepository, IPhotoService photoService
             ,IPostRepository postRepository)
         {
             _profileUserRepository = profileUserRepository;
             _photoService = photoService;
             _postRepository = postRepository;
+            _dashboardMapper = new DashboardMapper();
+
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
+
         [HttpGet]
-        public IActionResult CreatePost()
-        {
-            return View();
+        public async Task <IActionResult> Index(PostDashboardViewModel? dashboardVM = null)
+{
+            var postList = _postRepository.GetAllPostOrderByDateTime();
+            if (dashboardVM is null)
+            {
+                dashboardVM = new PostDashboardViewModel();
+            }
+            dashboardVM.Posts = new List<PostViewModel>();
+            await postList;
+            _dashboardMapper.DashboardIndex(dashboardVM.Posts,postList.Result.ToList());
+            return View("Index",dashboardVM);
         }
         [HttpPost]
-        public async Task<IActionResult> CreatePost(CreatePostViewModel model) 
-        {
+        public async Task<IActionResult> CreatePost(PostDashboardViewModel model) 
+        { 
             if(!ModelState.IsValid)
             {
-                return View(model);
+                return await Index(model);
             }
             var actualUser = await _profileUserRepository.GetByIdentityUserId(User.GetIdActualIdentityUser());
             string? stringImageUrl = null;
-            if(model.Image is not null && model.Image.Length>0)
+            if(model.CreatePost.Image is not null && model.CreatePost.Image.Length>0)
             {
-                var photoAddResult = await _photoService.AddPhotoAsync(model.Image);
+                var photoAddResult = await _photoService.AddPhotoAsync(model.CreatePost.Image);
                 stringImageUrl = photoAddResult.Url.ToString();
             }
-            var newPost = new Post()
-            {
-                Title = model.Title,
-                Body = model.Body,
-                ImageUrl = stringImageUrl,
-                ProfileUserId = actualUser.ProfileUserId,
-                ProfileUser = actualUser,
-                Created = DateTime.Now
-            };
+            var newPost = _dashboardMapper.CreatePost(model.CreatePost,actualUser,stringImageUrl);
             var addDbPostResult = await _postRepository.Add(newPost);
             if (!addDbPostResult)
             {
-                return View(model);
+                return await Index(model);
             }
-            return RedirectToAction("Index", "Dashboard");
+            return await Index();
         }
+        
+        
+
     }
 }

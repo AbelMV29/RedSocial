@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using RedSocial.mvc.Models;
+using RedSocial.mvc.DataModels;
 using System.Reflection.Emit;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 

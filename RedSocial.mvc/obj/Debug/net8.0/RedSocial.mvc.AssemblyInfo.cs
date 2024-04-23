@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RedSocial.mvc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01ff2b74d51b2b83a20125a2b8c14f9c234680cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3831d620eaacf090ee6222c5e3686b0bdb61b190")]
 [assembly: System.Reflection.AssemblyProductAttribute("RedSocial.mvc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RedSocial.mvc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

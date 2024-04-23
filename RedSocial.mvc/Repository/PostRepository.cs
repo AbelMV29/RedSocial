@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RedSocial.mvc.Data;
 using RedSocial.mvc.Interfaces;
-using RedSocial.mvc.Models;
+using RedSocial.mvc.DataModels;
 
 namespace RedSocial.mvc.Repository
 {
@@ -29,9 +29,6 @@ namespace RedSocial.mvc.Repository
             return postList;
         }
 
-        public Task<Post> GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<Post> GetById(int id) => await _context.Post.Include(p=>p.ProfileUser).FirstAsync(p=>p.PostId == id);
     }
 }

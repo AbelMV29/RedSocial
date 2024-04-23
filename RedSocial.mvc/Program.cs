@@ -1,6 +1,8 @@
+using BenchmarkDotNet.Running;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using RedSocial.mvc.Controllers;
 using RedSocial.mvc.Data;
 using RedSocial.mvc.Helper;
 using RedSocial.mvc.Interfaces;
@@ -39,6 +41,8 @@ namespace RedSocial.mvc
             builder.Services.AddScoped<SignInManager<IdentityUser>>();
             builder.Services.AddScoped<IProfileUserRepository, ProfileUserRepository>();
             builder.Services.AddScoped<IPostRepository, PostRepository>();
+            builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+            builder.Services.AddScoped<ICommentPostProfileRepository, CommentPostProfileRepository>();
 
             //Add cookie authentication
             builder.Services.ConfigureApplicationCookie(options =>
@@ -58,7 +62,7 @@ namespace RedSocial.mvc
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
-                app.UseExceptionHandler("/Error");
+                app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
@@ -73,6 +77,8 @@ namespace RedSocial.mvc
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Dashboard}/{action=Index}/{id?}");
+
+            app.MapFallbackToController("NotFound", "Home");
 
             app.Run();
         }

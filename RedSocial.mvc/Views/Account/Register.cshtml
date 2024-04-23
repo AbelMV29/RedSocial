@@ -39,22 +39,25 @@
             <input type="password" class="form-control" asp-for="Password" placeholder="*********" />
             <span class="text-danger" asp-validation-for="Password"></span>
             <span class="form-text">La contraseña debe tener [8,15] caracteres (1 especial, 1 mayuscula y 1 minuscula)</span>
-
-
         </div>
         <div class="col-12">
             <label asp-for="ConfirmPassword"></label>
             <input type="password" class="form-control" asp-for="ConfirmPassword" placeholder="*********" />
             <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
         </div>
-        @if(TempData.Count>0)
-        {
-            <div class="col-12">
-                <span class="alert alert-danger d-block">@TempData["Error"]</span>
-            </div>
-        }
+
+        <div class="col-12">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger col-12"></div>
+        </div>
         <div class="col-12">
             <button class="btn btn-success col-12 px-1" type="submit">Registrarme</button>
         </div>
     </form>
 </div>
+
+@section Scripts
+{
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}

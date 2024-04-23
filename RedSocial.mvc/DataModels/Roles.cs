@@ -1,4 +1,5 @@
-﻿namespace RedSocial.mvc.DataModels
+﻿
+namespace RedSocial.mvc.DataModels
 {
     public static class Roles
     {
